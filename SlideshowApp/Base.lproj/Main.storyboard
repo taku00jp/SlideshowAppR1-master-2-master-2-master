@@ -66,6 +66,7 @@
                                 <rect key="frame" x="145" y="331" width="30" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
+                                    <action selector="back:" destination="yns-jY-wVZ" eventType="touchUpInside" id="NgB-pE-Fkh"/>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="JSC-Kg-hkv"/>
                                 </connections>
                             </button>

@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         
         
         
+        
+        
         //UIImageに画像の名前を指定します
         let img1 = UIImage(named:"img1.jpg");
         let img2 = UIImage(named:"img2.jpg");
@@ -28,6 +30,23 @@ class ViewController: UIViewController {
         let imageView1 = UIImageView(image:img1)
         let imageView2 = UIImageView(image:img2)
         let imageView3 = UIImageView(image:img3)
+        
+        
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView")
+        imageView1.addGestureRecognizer(tapGesture)
+        imageView1.userInteractionEnabled = true
+        
+        let tapGesture2:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView")
+        imageView2.addGestureRecognizer(tapGesture2)
+        imageView2.userInteractionEnabled = true
+        
+        let tapGesture3:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView")
+        imageView3.addGestureRecognizer(tapGesture3)
+        imageView3.userInteractionEnabled = true
+        
+
+   
+
         
         //UIScrollViewを作成します
         let scrView = UIScrollView()
@@ -79,6 +98,7 @@ class ViewController: UIViewController {
         scrView.contentOffset = CGPoint(x: 240 * pageNo, y: 0)
         
     }
+ 
     
     var timer: NSTimer!
     
@@ -88,6 +108,9 @@ class ViewController: UIViewController {
             timer.invalidate()
             timer = nil
             
+            backbtn.hidden = false
+            nextbtn.hidden =  false
+            
         }else {
             
             timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "changePic", userInfo: nil, repeats: true)
@@ -96,12 +119,9 @@ class ViewController: UIViewController {
             backbtn.hidden = true
             nextbtn.hidden = true
             
-            
         }
 
     }
-    
-    
     
     func changePic() {
         
@@ -129,8 +149,15 @@ class ViewController: UIViewController {
         
         scrView.contentOffset = CGPoint(x: 240 * pageNo, y: 0)
         
-        
+
         
     }
-    
+    func didClickImageView(recognizer: UIGestureRecognizer) {
+        if let imageView = recognizer.view as? UIImageView {
+            let image = imageView.image
+            let nextViewController =
+            nextViewController.image = ViewController2
+
+
+
 }

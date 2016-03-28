@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController2: UIViewController {
 
+    @IBAction func back(sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
