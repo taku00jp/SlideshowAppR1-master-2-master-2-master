@@ -32,15 +32,15 @@ class ViewController: UIViewController {
         let imageView3 = UIImageView(image:img3)
         
         
-        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView")
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView:")
         imageView1.addGestureRecognizer(tapGesture)
         imageView1.userInteractionEnabled = true
         
-        let tapGesture2:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView")
+        let tapGesture2:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView:")
         imageView2.addGestureRecognizer(tapGesture2)
         imageView2.userInteractionEnabled = true
         
-        let tapGesture3:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView")
+        let tapGesture3:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView:")
         imageView3.addGestureRecognizer(tapGesture3)
         imageView3.userInteractionEnabled = true
         
@@ -155,9 +155,9 @@ class ViewController: UIViewController {
     func didClickImageView(recognizer: UIGestureRecognizer) {
         if let imageView = recognizer.view as? UIImageView {
             let image = imageView.image
-            let nextViewController =
-            nextViewController.image = ViewController2
-
-
+            let nextViewController = ViewController2()
+            ViewController2.image = image
+        }
+    }
 
 }
