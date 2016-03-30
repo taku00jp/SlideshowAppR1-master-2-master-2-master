@@ -44,7 +44,7 @@
                     <connections>
                         <outlet property="backbtn" destination="K2X-MG-vxi" id="sxh-T4-h5v"/>
                         <outlet property="nextbtn" destination="gTQ-sc-6Xv" id="tBD-je-vW5"/>
-                        <segue destination="yns-jY-wVZ" kind="presentation" identifier="ViewController2" id="icF-ff-1TE"/>
+                        <segue destination="yns-jY-wVZ" kind="presentation" identifier="next" id="icF-ff-1TE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,14 +64,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaO-bX-hRr">
-                                <rect key="frame" x="158" y="420" width="30" height="30"/>
+                                <rect key="frame" x="145" y="498" width="30" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="back:" destination="yns-jY-wVZ" eventType="touchUpInside" id="vDB-kV-fYx"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VOy-1h-IFE"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7n-am-UMK">
-                                <rect key="frame" x="5" y="37" width="468" height="318"/>
+                                <rect key="frame" x="97" y="76" width="371" height="328"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,12 +80,11 @@
                     <connections>
                         <outlet property="image" destination="Q7n-am-UMK" id="qhz-Tg-uBZ"/>
                         <outletCollection property="image" destination="Q7n-am-UMK" collectionClass="NSMutableArray" id="H7n-TL-yd4"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ViewController" id="2hH-bo-cNh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8W-a1-hOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="435"/>
+            <point key="canvasLocation" x="1149" y="434"/>
         </scene>
     </scenes>
 </document>

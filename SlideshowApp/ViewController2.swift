@@ -11,6 +11,7 @@ import UIKit
 class ViewController2: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
+    var imageName:String? = ""
     
     @IBAction func back(sender: AnyObject) {
     }
@@ -18,6 +19,8 @@ class ViewController2: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       image.image = UIImage(named: imageName!)
 
         // Do any additional setup after loading the view.
     }
@@ -27,7 +30,6 @@ class ViewController2: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

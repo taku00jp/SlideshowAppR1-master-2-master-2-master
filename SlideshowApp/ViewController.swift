@@ -157,6 +157,9 @@ class ViewController: UIViewController {
                 let viewController2:ViewController2 = segue.destinationViewController as! ViewController2
                 
                 viewController2.image = sender!.image
+                
+
+                
             }
      }
 }
