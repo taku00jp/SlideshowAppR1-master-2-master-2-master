@@ -158,6 +158,9 @@ class ViewController: UIViewController {
                 
                 viewController2.image = sender!.image
                 
+                viewController2.image.image = UIImage(named: "img1.jpg")
+                viewController2.image.image = UIImage(named: "img2.jpg")
+                viewController2.image.image = UIImage(named: "img3.jpg")
 
                 
             }

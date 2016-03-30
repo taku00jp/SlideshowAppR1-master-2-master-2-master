@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2X-MG-vxi">
@@ -44,12 +44,12 @@
                     <connections>
                         <outlet property="backbtn" destination="K2X-MG-vxi" id="sxh-T4-h5v"/>
                         <outlet property="nextbtn" destination="gTQ-sc-6Xv" id="tBD-je-vW5"/>
-                        <segue destination="yns-jY-wVZ" kind="presentation" identifier="next" id="icF-ff-1TE"/>
+                        <segue destination="yns-jY-wVZ" kind="modal" identifier="next" id="icF-ff-1TE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="429.49999999999989"/>
+            <point key="canvasLocation" x="162" y="406"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="Ybg-VX-Eku">
@@ -60,7 +60,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eDt-9u-EAm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cZk-wH-LS1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaO-bX-hRr">
@@ -68,11 +68,11 @@
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="back:" destination="yns-jY-wVZ" eventType="touchUpInside" id="vDB-kV-fYx"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="VOy-1h-IFE"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="VOy-1h-IFE"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7n-am-UMK">
-                                <rect key="frame" x="97" y="76" width="371" height="328"/>
+                                <rect key="frame" x="6" y="38" width="309" height="320"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8W-a1-hOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="434"/>
+            <point key="canvasLocation" x="612" y="410"/>
         </scene>
     </scenes>
 </document>
