@@ -16,10 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
+    
         
         //UIImageに画像の名前を指定します
         let img1 = UIImage(named:"img1.jpg");
@@ -43,10 +40,6 @@ class ViewController: UIViewController {
         let tapGesture3:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didClickImageView:")
         imageView3.addGestureRecognizer(tapGesture3)
         imageView3.userInteractionEnabled = true
-        
-
-   
-
         
         //UIScrollViewを作成します
         let scrView = UIScrollView()
@@ -129,7 +122,7 @@ class ViewController: UIViewController {
         
         if pageNo == 3 {
             pageNo = 0
-            
+        
             
         }
         
@@ -149,15 +142,24 @@ class ViewController: UIViewController {
         
         scrView.contentOffset = CGPoint(x: 240 * pageNo, y: 0)
         
-
-        
     }
+    
     func didClickImageView(recognizer: UIGestureRecognizer) {
-        if let imageView = recognizer.view as? UIImageView {
-            let image = imageView.image
-            let nextViewController = ViewController2()
-            ViewController2.image = image
+        if let selectImageView = recognizer.view as? UIImageView {
+            performSegueWithIdentifier("next", sender: selectImageView)
         }
     }
+    
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        // segueから遷移先のResultViewControllerを取得する
+        if(segue.identifier == "next"){
+            if sender is UIImageView {
+                let viewController2:ViewController2 = segue.destinationViewController as! ViewController2
+                
+                viewController2.image = sender!.image
+            }
+     }
+}
 
 }
+    

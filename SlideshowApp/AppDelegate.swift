@@ -1,11 +1,10 @@
-//
+
 //  AppDelegate.swift
 //  SlideshowApp
 //
 //  Created by 斉藤 on 2016/03/21.
 //  Copyright © 2016年 taku.saito. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain

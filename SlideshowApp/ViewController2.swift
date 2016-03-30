@@ -10,13 +10,18 @@ import UIKit
 
 class ViewController2: UIViewController {
 
-    @IBAction func back(sender: UIButton) {
+    @IBOutlet weak var image: UIImageView!
+    
+    @IBAction func back(sender: AnyObject) {
     }
+
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
