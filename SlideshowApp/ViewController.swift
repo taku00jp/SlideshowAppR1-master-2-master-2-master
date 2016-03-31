@@ -44,8 +44,14 @@ class ViewController: UIViewController {
         //UIScrollViewを作成します
         let scrView = UIScrollView()
         
+        let screen = UIScreen.mainScreen().bounds.size
+        
+        let px = (screen.width - 240)/2
+        
+        
         //表示位置 + 1ページ分のサイズ
-        scrView.frame = CGRectMake(81, 81, 240, 240)
+        //scrView.frame = CGRectMake(81, 81, 240, 240)
+        scrView.frame = CGRectMake(px, 81, 240, 240)
         
         //全体のサイズ
         scrView.contentSize = CGSizeMake(240*3, 240)
@@ -156,11 +162,11 @@ class ViewController: UIViewController {
             if sender is UIImageView {
                 let viewController2:ViewController2 = segue.destinationViewController as! ViewController2
                 
-                viewController2.image = sender!.image
+                viewController2.imageName = "img\(pageNo+1).jpg"
                 
-                viewController2.image.image = UIImage(named: "img1.jpg")
-                viewController2.image.image = UIImage(named: "img2.jpg")
-                viewController2.image.image = UIImage(named: "img3.jpg")
+                //viewController2.image.image = UIImage(named: "img1.jpg")
+                //viewController2.image.image = UIImage(named: "img2.jpg")
+                //viewController2.image.image = UIImage(named: "img3.jpg")
 
                 
             }

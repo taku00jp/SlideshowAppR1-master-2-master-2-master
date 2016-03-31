@@ -11,6 +11,7 @@ import UIKit
 class ViewController2: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
+    
     var imageName:String? = ""
     
     @IBAction func back(sender: AnyObject) {
@@ -19,6 +20,8 @@ class ViewController2: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(imageName)
         
        image.image = UIImage(named: imageName!)
 
